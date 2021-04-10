@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if title %}
+      <title>Hunter Codes - {{ title }}</title>
+    {% else %}
+      <title>Hunter Codes</title>
+    {% endif %}
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <section>
+      <div class="max-w-7xl mx-auto">
+        {% include 'blog/navbar.html' %}
+        {% block content %}
+        {% endblock %}
+      </div>
+    </section>
+  </body>
+</html>
