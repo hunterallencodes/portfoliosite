@@ -13,5 +13,6 @@ class PortfolioView(ListView):
     queryset = Project.objects.all()
     context_object_name = 'projects'
 
-def portfolio(request):
-    return render(request, 'blog/portfolio.html')
+
+def contact(request):
+    return render(request, 'blog/contact.html')
