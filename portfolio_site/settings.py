@@ -15,7 +15,7 @@ SECRET_KEY = env('SECRET_KEY')
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-ALLOWED_HOSTS = ['165.232.137.49', 'hunterallen.codes', 'www.hunterallen.codes', 'http://hunterallen.codes', 'http://www.hunterallen.codes',]
+ALLOWED_HOSTS = ['localhost', '165.232.137.49', 'hunterallen.codes', 'www.hunterallen.codes', 'http://hunterallen.codes', 'http://www.hunterallen.codes',]
 
 
 # Application definition
@@ -70,12 +70,13 @@ WSGI_APPLICATION = 'portfolio_site.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': env("DB_NAME"),
-        'USER': env("DB_USER"),
-        'PASSWORD': env("DB_PASSWORD"),
-        'HOST': env("DB_HOST"),
-        'POST': env("DB_PORT"),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'sqlite3',
+        # 'NAME': env("DB_NAME"),
+        # 'USER': env("DB_USER"),
+        # 'PASSWORD': env("DB_PASSWORD"),
+        # 'HOST': env("DB_HOST"),
+        # 'POST': env("DB_PORT"),
     }
 }
 
