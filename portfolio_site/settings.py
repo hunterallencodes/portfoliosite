@@ -16,7 +16,8 @@ SECRET_KEY = env('SECRET_KEY')
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 ALLOWED_HOSTS = ['147.182.238.202', 'hunterallen.codes', 'www.hunterallen.codes', 'http://hunterallen.codes', 'http://www.hunterallen.codes',]
-
+if DEBUG:
+    ALLOWED_HOSTS.append('localhost')
 
 # Application definition
 
